@@ -1,13 +1,20 @@
 java c
 Tutorial EG501V Computational Fluid Dynamics (AY   2023/24) 
-Tutorial 3. Discretization: start-up flow in a thin fluid layer
-In Lecture Notes 2  Tutorial 2 we derived   a parabolic PDE for the flow between two parallel plates. Initially both   plates and the fluid between them are at rest.    At   time   equal   zero the upper plate starts moving with a constant velocity u0   , see the figure. The PDE reads  (Eq. 2.2 in Lecture Notes 2) with ux the   flow velocity   in x-direction   that   depends   on   they-location   and   time t; ν = μρ is   the   kinematic viscosity of   the fluid and is   a   constant.
-In Lecture Notes 3 it was   shown how to discretize a parabolic PDE   (there in   temperature T)   and to eventually come up with an update rule (Eq. 3.5) that   descr代 写EG501V Computational Fluid Dynamics (AY 2023/24) Tutorial 3R
-代做程序编程语言ibes how to   determine   the   situation at a new time instant (j+1) if   the situation   at   the   old   time   instant   (j)   is   known. 
+Tutorial 2. Incompressible Navier-Stokes equations
+In Lecture Notes   1 the Navier-Stokes equations (momentum balance) for incompressible flow   were derived. They were eventually written in the following form.
 
-Your assignment 
-(1) Follow the same procedure as in Lecture Notes 3 to   derive   an   update rule   for the velocity ux at   time   instant j+1 ( ux ,i ,j+1       where   the   index i stands   for   they-location   in   the   fluid   film).
-(2) Consider the specific situation where L=5 mm, u0   =1 m/s, and ν =10-6   m2/s. Discretize y such   that   △y =1 mm   (i.e. divide   the   distance L in   five   equal   portions) and   take   time   steps   of    △t =0.1 s. Determine the velocity in the fluid layer after one   and two time   steps   (i.e.   at t=0.1   s and t=0.2   s).
+In this equation, the viscosity μ and the density ρ are constants. We now consider two simple   flow configurations.
+Config. 1. The steady state flow of   a liquid   in   the   space between   two   very   large   static parallel   plates   at   distance H of   each   other   in   the   presence   of   a   constant   pressure   gradient   in   the x-direction  Gravity is pointing in the negative y-direction.
+Config. 2. The start-up of   the flow of   liquid between two very large parallel plates   at   distance H of   each other. There is no pressure gradient. Before time t=0   everything is   standing   still.   At t=0, the upper plate starts 代 写EG501V Computational Fluid Dynamics (AY 2023/24)  Tutorial 2Matlab
+代做程序编程语言moving with a constant velocity U. In this   configuration we   do not         consider   gravity.
+Your assignments 
+For Configuration   1:
+a.    Begin with the full, two-dimensional Navier-Stokes equations and determine which of   the terms are zero and   which   are   not.b.   Derive   an   expression   for   the   velocity ux as   a   function   of y by   applying   the   simplified   NS    equations (as found under Item a.) and by applying the no-slip   condition   at   the two plates.
+For Configuration 2:
+c.    Begin with the full, two-dimensional Navier-Stokes equations and determine which of   the terms are zero and   which   are   not.
+d.   Make   sure   that   when   steady   state   has   been   reached   ( t →   ∞   ), the   simplified   form   of   theNS equations as found under Item c. leads to   a linear   velocity profile between the plates.
+
+
 
 
 
